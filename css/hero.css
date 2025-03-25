@@ -1,0 +1,43 @@
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 140px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    transition: opacity 0.5s;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+  .cursor {
+    display: inline-block;
+    background-color: #2d3748;
+    width: 2px;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+  .hero-description {
+    font-size: 20px;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+ 

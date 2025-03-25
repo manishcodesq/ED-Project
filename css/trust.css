@@ -1,0 +1,83 @@
+/* Styling for Trust Section */
+.trust-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.trust-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 25px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border: 2px solid #007bff;
+}
+.card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
