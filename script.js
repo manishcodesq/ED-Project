@@ -14,34 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const phrases = ["task management", "budget tracking", "QR check-ins"];
     let currentPhraseIndex = 0;
     let currentLetterIndex = 0;
-    const typingSpeed = 100;
+    const typingSpeed = 900;
     const erasingSpeed = 60;
     const delayBetweenPhrases = 1500;
 
     function type() {
-        const currentPhrase = phrases[currentPhraseIndex];
-        if (currentLetterIndex < currentPhrase.length) {
-            dynamicText.textContent += currentPhrase.charAt(currentLetterIndex);
-            currentLetterIndex++;
-            setTimeout(type, typingSpeed);
-        } else {
-            setTimeout(erase, delayBetweenPhrases);
-        }
-    }
-
-    function erase() {
-        if (currentLetterIndex > 0) {
-            dynamicText.textContent = dynamicText.textContent.slice(0, -1);
-            currentLetterIndex--;
-            setTimeout(erase, erasingSpeed);
-        } else {
-            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-            setTimeout(type, 300);
+        try{
+        setTimeout(()=>{
+            for(const currentPhrase in phrases){
+                for (currentLetterIndex; currentLetterIndex < currentPhrase.length; currentLetterIndex++) {
+                    dynamicText.textContent += currentPhrase.charAt(currentLetterIndex);
+                }
+            }
+        }, typingSpeed);
+        console.log("Dynamic text.")
+        }catch(error){
+            console.log("Error: ", error)
         }
     }
 
     // Start typing after the page loads
-    setTimeout(type, 500);
+    type()
 
     // ✅ Scroll Fade-in Animation for Sections
     const fadeElements = document.querySelectorAll(".hero, .trust-section, .features-section, .how-it-works");
