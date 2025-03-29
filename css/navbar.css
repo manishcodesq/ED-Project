@@ -9,6 +9,7 @@
     position: relative;
     top: 0;
     left: 0;
+    margin-bottom: 0px;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -43,6 +44,6 @@
 .features-section, 
 .how-it-works, 
 .hero {
-    padding: 60px 20px;
-    margin-bottom: 60px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
 }
