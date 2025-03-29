@@ -34,6 +34,24 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="slider">
+            <div class="slide fade">
+                <img class="slider.img" src="images/1st.jpg" alt="Event Planning">
+                <div class="caption">Corporate Meetings</div>
+            </div>
+            <div class="slide fade">
+                <img class="slider.img" src="images/2nd.jpg" alt="Automate Tasks">
+                <div class="caption">Parties and Fests </div>
+            </div>
+            <div class="slide fade">
+                <img class="slider.img" src="images/3rd.jpg" alt="Smart Planning">
+                <div class="caption">Marriages and Functions</div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+        </div>
+        
+        
         <h1 data-aos="fade-up">Plan Events Effortlessly with Event Ease!</h1>
         <p id="subtitle" data-aos="fade-up" data-aos-delay="200">Simplify event planning with smart tools like</p>
         <p id="dynamic-text"></p>
@@ -200,12 +218,17 @@
   
     <!-- Optional Lead Capture Form -->
     <form id="contact-form" class="contact-form">
-      <h3>Contact Us</h3>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Tell us about your event needs..." required></textarea>
-      <button type="submit" class="btn">Submit</button>
+        <h3>Contact Us</h3>
+    
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    
+        <textarea id="message" name="message" rows="4" placeholder="Tell us about your event needs..." required></textarea>
+    
+        <button type="submit" class="btn">Submit</button>
     </form>
+    
   </section>
   
 
@@ -225,5 +248,26 @@
             document.getElementById('trust-section').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+    
+        function changeSlide(n) {
+            slideIndex += n - 1; 
+            showSlides();
+        }
+    </script>
+    
 </body>
 </html>
