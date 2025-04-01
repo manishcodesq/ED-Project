@@ -1,11 +1,16 @@
  /* About Section */
  .about-section {
     max-width: 1100px;
-    margin: 3rem auto;
+    margin: 6rem auto 3rem;
     padding: 0 2rem;
     text-align: center;
   }
-  
+  .about{
+    color: #007bff;
+  }
+  .home{
+    color: #007bff;
+  }
   .about-section h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -54,7 +59,8 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    border: 2px solid transparent; /* Default transparent border */
+    border: 2px solid transparent; 
+    position: relative;
   }
   
   .team-card:hover {
@@ -66,11 +72,18 @@
   .team-card img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 45%;
     object-fit: cover;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
   }
+  .team-card i {
+    font-size: 24px;
+    color: #007bff;
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+}
   
   .team-card:hover img {
     transform: scale(1.1);
