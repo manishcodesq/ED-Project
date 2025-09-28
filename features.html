@@ -3,46 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features|Event-Ease</title>
+    <title>Features | EventEase - Complete Event Management Solutions</title>
+    <meta name="description" content="Discover EventEase features including task management, budget tracking, QR check-ins, collaboration tools, and automated reminders for seamless event planning.">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/trust.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/features.css">
 </head>
 <body>
-    <section class="features">
-        <h1>Our Features</h1>
-        <div class="feature-list">
-            <div class="feature-item">
-                <i class="fas fa-tasks"></i>
-                <h3>Task Management</h3>
-                <p>Manage tasks effectively with our intuitive task management system.</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="EventEase Logo">
+            <h2>Event Ease</h2>
+        </div>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html">How It Works</a></li>
+            <li><a href="features.html" class="active">Features</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <!-- Main Content -->
+    <main class="features-page">
+        <!-- Hero Section -->
+        <section class="features-hero">
+            <div class="hero-content">
+                <h1>Powerful Features for Perfect Events</h1>
+                <p class="hero-subtitle">Everything you need to plan, manage, and execute successful events - all in one comprehensive platform</p>
             </div>
-            <div class="feature-item">
-                <i class="fas fa-chart-line"></i>
-                <h3>Budget Tracking</h3>
-                <p>Track your budget and expenses with detailed reports.</p>
+        </section>
+
+        <!-- Main Features Section -->
+        <section class="features">
+            <div class="features-header">
+                <h2>Core Features</h2>
+                <p>Discover the tools that make event planning effortless</p>
             </div>
-            <div class="feature-item">
-                <i class="fas fa-qrcode"></i>
-                <h3>QR Check-ins</h3>
-                <p>Enable quick and easy check-ins with QR code scanning.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item" data-feature="task-management">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Task Management</h3>
+                        <p>Organize, assign, and track tasks with our intuitive management system. Keep your team aligned and deadlines met.</p>
+                        <ul class="feature-benefits">
+                            <li>✓ Drag & drop task organization</li>
+                            <li>✓ Team member assignments</li>
+                            <li>✓ Progress tracking & deadlines</li>
+                            <li>✓ Priority levels & notifications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-feature="budget-tracking">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Budget Tracking</h3>
+                        <p>Monitor expenses, track budgets, and generate detailed financial reports to keep your event costs under control.</p>
+                        <ul class="feature-benefits">
+                            <li>✓ Real-time expense tracking</li>
+                            <li>✓ Budget vs. actual comparisons</li>
+                            <li>✓ Vendor payment management</li>
+                            <li>✓ Financial reporting & analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-feature="qr-checkins">
+                    <div class="feature-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>QR Check-ins</h3>
+                        <p>Enable quick and secure check-ins with QR code technology. Reduce wait times and improve attendee experience.</p>
+                        <ul class="feature-benefits">
+                            <li>✓ Instant QR code generation</li>
+                            <li>✓ Mobile scanning app</li>
+                            <li>✓ Real-time attendance tracking</li>
+                            <li>✓ Contact-free entry system</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-feature="collaboration">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Collaboration Tools</h3>
+                        <p>Enhance teamwork with integrated communication tools, file sharing, and real-time collaboration features.</p>
+                        <ul class="feature-benefits">
+                            <li>✓ Team chat & messaging</li>
+                            <li>✓ File sharing & storage</li>
+                            <li>✓ Real-time collaboration</li>
+                            <li>✓ Comment & feedback system</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-feature="reminders">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Automated Reminders</h3>
+                        <p>Never miss important deadlines with smart automated reminders and notifications for you and your team.</p>
+                        <ul class="feature-benefits">
+                            <li>✓ Smart notification system</li>
+                            <li>✓ Email & SMS reminders</li>
+                            <li>✓ Customizable reminder schedules</li>
+                            <li>✓ Deadline alerts & warnings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-feature="analytics">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Event Analytics</h3>
+                        <p>Gain insights with comprehensive analytics and reporting tools to measure event success and improve future events.</p>
+                        <ul class="feature-benefits">
+                            <li>✓ Attendance analytics</li>
+                            <li>✓ Engagement metrics</li>
+                            <li>✓ Performance reports</li>
+                            <li>✓ ROI calculations</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="feature-item">
-                <i class="fas fa-users"></i>
-                <h3>Collaboration Tools</h3>
-                <p>Enhance teamwork with integrated collaboration tools.</p>
+        </section>
+
+        <!-- Additional Features Section -->
+        <section class="additional-features">
+            <div class="section-header">
+                <h2>Additional Capabilities</h2>
+                <p>More tools to enhance your event management experience</p>
             </div>
-            <div class="feature-item">
-                <i class="fas fa-bell"></i>
-                <h3>Automated Reminders</h3>
-                <p>Never forget important tasks with automated reminders.</p>
+            
+            <div class="additional-grid">
+                <div class="additional-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Mobile App</h4>
+                    <p>Manage events on-the-go with our mobile application</p>
+                </div>
+                
+                <div class="additional-item">
+                    <i class="fas fa-share-alt"></i>
+                    <h4>Social Integration</h4>
+                    <p>Share events across social media platforms seamlessly</p>
+                </div>
+                
+                <div class="additional-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Marketing</h4>
+                    <p>Send invitations and updates with built-in email tools</p>
+                </div>
+                
+                <div class="additional-item">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h4>Ticketing System</h4>
+                    <p>Sell tickets and manage registrations effortlessly</p>
+                </div>
+                
+                <div class="additional-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Event Templates</h4>
+                    <p>Quick-start templates for common event types</p>
+                </div>
+                
+                <div class="additional-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Get help whenever you need it with our support team</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="features-cta">
+            <div class="cta-content">
+                <h2>Ready to Experience These Features?</h2>
+                <p>Start planning your perfect event today with EventEase's powerful feature set</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </a>
+                    <a href="about.html" class="btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>EventEase</h4>
+                <p>Making event planning effortless with powerful, intuitive tools.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="work.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@eventease.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
             </div>
         </div>
-    </section>
-    
+        <div class="footer-bottom">
+            <p>&copy; 2025 EventEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Feature item interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureItems = document.querySelectorAll('.feature-item');
+            
+            featureItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    featureItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
