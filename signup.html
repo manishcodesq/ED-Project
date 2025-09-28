@@ -3,29 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup - Event Ease</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/about.css">
+    <title>Sign Up - EventEase | Create Your Account</title>
+    <meta name="description" content="Join EventEase today and start planning amazing events with our comprehensive event management platform.">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/trust.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Sign Up</h2>
-        <form id="signup-form">
-            <input type="text" id="name" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email Address" required>
-            <input type="text" id="company" placeholder="Company Name" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-            <button type="submit" class="btn">Sign Up</button>
-        </form>
-        <p>Already have an account? <a href="login.html">Login here</a></p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="EventEase Logo">
+            <h2>Event Ease</h2>
+        </div>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html">How It Works</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="signup.html" class="active">Signup</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <!-- Background Elements -->
+    <div class="signup-background">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
     </div>
+
+    <!-- Main Content -->
+    <div class="signup-page">
+        <div class="signup-container">
+            <!-- Left Side - Benefits -->
+            <div class="signup-benefits">
+                <div class="benefits-content">
+                    <h2>Join EventEase Today</h2>
+                    <p class="benefits-subtitle">Start planning amazing events with our comprehensive platform</p>
+                    
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Quick Start</h3>
+                                <p>Get started in minutes with our intuitive setup process</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Team Collaboration</h3>
+                                <p>Invite your team and collaborate in real-time</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Secure & Reliable</h3>
+                                <p>Enterprise-grade security for your data</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Advanced Analytics</h3>
+                                <p>Track performance and optimize your events</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"EventEase transformed how we manage our corporate events. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <img src="images/user.jpg" alt="Sarah Johnson">
+                                <div>
+                                    <span class="author-name">Sarah Johnson</span>
+                                    <span class="author-title">Event Manager, TechCorp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Signup Form -->
+            <div class="signup-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h1>Create Your Account</h1>
+                        <p>Join thousands of event planners worldwide</p>
+                    </div>
+
+                    <!-- Social Signup Options -->
+                    <div class="social-signup">
+                        <button type="button" class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            Sign up with Google
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            Sign up with Facebook
+                        </button>
+                    </div>
+
+                    <div class="divider">
+                        <span>or sign up with email</span>
+                    </div>
+
+                    <!-- Signup Form -->
+                    <form id="signup-form" novalidate>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="first-name">First Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="first-name" name="firstName" placeholder="Enter first name" required>
+                                </div>
+                                <span class="error-message" id="first-name-error"></span>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="last-name">Last Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="last-name" name="lastName" placeholder="Enter last name" required>
+                                </div>
+                                <span class="error-message" id="last-name-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="company">Company Name</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-building"></i>
+                                <input type="text" id="company" name="company" placeholder="Enter company name" required>
+                            </div>
+                            <span class="error-message" id="company-error"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                            </div>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" placeholder="Create password" required>
+                                    <button type="button" class="toggle-password" data-target="password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <span class="error-message" id="password-error"></span>
+                                <div class="password-strength">
+                                    <div class="strength-meter">
+                                        <div class="strength-bar" id="strength-bar"></div>
+                                    </div>
+                                    <span class="strength-text" id="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm password" required>
+                                    <button type="button" class="toggle-password" data-target="confirm-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <span class="error-message" id="confirm-password-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#terms" target="_blank">Terms of Service</a> and <a href="#privacy" target="_blank">Privacy Policy</a>
+                            </label>
+                            <span class="error-message" id="terms-error"></span>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates and tips
+                            </label>
+                        </div>
+
+                        <button type="submit" class="signup-btn" id="signup-btn">
+                            <span class="btn-text">Create Account</span>
+                            <span class="btn-loader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal" style="display: none;">
+        <div class="modal">
+            <div class="modal-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Account Created Successfully!</h3>
+                <p>Welcome to EventEase! Check your email to verify your account.</p>
+                <button class="modal-btn" onclick="window.location.href='login.html'">
+                    Continue to Login
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="js/signup-validation.js"></script>
 </body>
 </html>
