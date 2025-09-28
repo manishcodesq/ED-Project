@@ -1,7 +1,16 @@
+/* ===================
+   RESPONSIVE DESIGN ADDITIONS
+   =================== */
 
-/* Buttons */
+/* Base styles (Mobile First - Default for screens < 640px) */
+
+/* Buttons - Enhanced Responsive */
 .buttons {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .btn {
@@ -9,11 +18,14 @@
     color: #fff;
     padding: 12px 20px;
     border: none;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
 }
 
 .btn:hover {
@@ -21,109 +33,86 @@
     transform: translateY(-3px);
 }
 
+.btn:focus {
+    outline: 2px dashed #0056b3;
+    outline-offset: 4px;
+}
 
+/* Container - Mobile First */
 .container {
     background: #ffffff;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    margin-top: 100px;
-        width: 80%;
-        max-width: 100%;
-    
-        
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
 }
+
 .container1 {
     background: #ffffff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    margin-top: 100px;
-        width: 40%;
-        max-width: 100%;
-        
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto;
 }
 
 .section-container {
- 
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
-}
-html {
-    scroll-behavior: smooth;
+    padding: 0 15px;
 }
 
-/* Form Headings */
-h2 {
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #007bff;
-}
-
-/* Form Elements */
+/* Form Elements - Mobile Optimized */
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 input {
-    padding: 12px;
+    padding: 14px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px; /* Prevents zoom on iOS */
     background: #f9f9f9;
     color: #333;
-}
-p {
-    margin-top: 10px;
-}
-
-p a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 400;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-p a:hover {
-    text-decoration: underline;
-}
-
-/* Forgot Password Link */
-.forgot-password {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
-}
-
-/* Features Section */
+/* Features Section - Mobile Grid */
 .features-section {
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 15px;
     background: #ffffff;
     animation: fadeInUp 1s ease forwards;
 }
 
 .features-section h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
     color: #007bff;
+}
+
+.features-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
 }
 
 .feature-card {
     background: #f9f9f9;
     padding: 20px;
-    width: 220px; 
-    height: 160px; 
+    width: 100%;
+    max-width: 280px;
+    min-height: 160px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -131,45 +120,40 @@ p a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px) scale(1.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-bottom: 3px solid #007bff;
-  }
-  
-  .features-section .features-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  /** Who Uses Event Ease Section **/
+}
+
+/* Users Section - Mobile Grid */
 .Users {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 15px;
     background: #ffffff;
     animation: fadeInUp 1s ease forwards;
 }
 
 .Users h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
     color: #007bff;
 }
 
 .user-cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
 }
 
 .user-card {
     background: #f9f9f9;
-    padding: 25px;
-    width: 250px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
@@ -177,326 +161,159 @@ p a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
 }
 
 .user-card:hover {
-    transform: translateY(-8px) scale(1.05);
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    border-color: #007bff; 
+    border-color: #007bff;
 }
 
-
-.user-card span {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.user-card p {
-    font-size: 16px;
-    color: #555;
-}
 .user-image {
-    width: 200px; /* Adjust image size */
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 12px;
 }
 
-@media (max-width: 768px) {
-    .user-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-.btn:focus {
-    outline: 2px dashed #0056b3;
-    outline-offset: 4px;
-}
-/* Testimonials Section Styling */
+/* Testimonials - Mobile Layout */
 .testimonials-section {
-    padding: 60px 20px;
+    padding: 40px 15px;
     text-align: center;
     background-color: #f9f9f9;
 }
 
 .reviews, .case-studies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
     margin-top: 30px;
 }
 
-
-.review-card p, .case-card p {
-    font-size: 0.95rem;
-    margin: 15px 0;
-}
-
-.review-card h4 {
-    margin: 10px 0;
-    color: #f39c12;
-}
-
-.case-studies h3 {
-    width: 100%;
-    margin-top: 50px;
-    font-weight: 600;
-}
-
-/* Hover Effect */
 .review-card, .case-card {
     background: #fff;
     padding: 20px;
-    max-width: 300px;
+    width: 100%;
+    max-width: 320px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 2px solid transparent;
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-
     cursor: pointer;
 }
 
-.review-card:hover, .case-card:hover {
-    border-color: #3498db; /* Blue border */
-    transform: translateY(-5px); /* Slight lift */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Deeper shadow */
-}
+/* Pricing Cards - Mobile Stack */
 .pricing-section {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 15px;
 }
 
 .pricing-card {
     background: #fff;
     padding: 20px;
-    max-width: 300px;
+    width: 100%;
+    max-width: 320px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 2px solid transparent;
     transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
-    display: inline-block;
-    vertical-align: top;
+    margin: 20px auto;
+    display: block;
 }
 
-.pricing-card:hover {
-    border-color: #3498db;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.pricing-card .price {
-    font-size: 24px;
-    color: #2c3e50;
-    margin: 10px 0;
-}
-
-.pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.pricing-card ul li {
-    margin: 10px 0;
-}
-
-.compare-btn {
-    margin-top: 20px;
-}
-.cta-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-}
-
-.primary-btn {
-    background-color: #3498db;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.primary-btn:hover {
-    background-color: #2c80b4;
-    transform: translateY(-3px);
-}
-
-.contact-link {
-    color: #3498db;
-    text-decoration: underline;
-}
-
+/* Contact Form - Mobile Optimized */
 .contact-form {
     margin-top: 30px;
+    width: 100%;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 2px solid transparent;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form:hover {
-    border-color: #3498db;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.contact-form button {
-    width: 100%;
-}
- 
-  
-  .features h2 {
-    margin-bottom: 2rem;
-  }
-  
-  .feature-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .feature-card {
-    background: #fff;
-    padding: 1.5rem;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .btn {
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  
-  .btn:hover {
-    background: #0056b3;
-  }
-
-  /* Styling for the Features Section */
+/* Features List - Mobile Grid */
 .features {
-    padding: 60px 20px;
+    padding: 40px 15px;
     background: #f4f4f4;
     text-align: center;
 }
 
-/* Header for Features */
 .features h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #007bff;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: bold;
 }
 
-/* Flex layout for the feature items */
 .feature-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Makes the layout responsive */
+    grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
 }
 
-/* Styling individual feature cards */
 .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    text-align: center; /* Aligns text in the center */
-}
-
-.feature-item:hover {
-    transform: translateY(-5px) scale(1.05); /* Slightly lifts the card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-/* Icon styling */
-.feature-item i {
-    font-size: 3rem; /* Larger icon size */
-    color: #007bff;
-    animation: fadeIn 1s ease-in-out; /* Optional fade-in animation */
-}
-
-/* Animation for the icon */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Optional styling for the card text */
-.feature-item h3 {
-    font-size: 1.4rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.feature-item p {
-    font-size: 1rem;
-    color: #777;
-}
-
-/* how it works section */
-.how-it-works{
     text-align: center;
-    padding: 60px 20px;
+    width: 100%;
+    max-width: 280px;
+}
+
+/* How It Works - Mobile Layout */
+.how-it-works {
+    text-align: center;
+    padding: 40px 15px;
     background: #ffffff;
     animation: fadeInUp 1s ease forwards;
 }
 
 .how-it-works h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
     color: #007bff;
 }
 
 .step-cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
 }
 
 .step-card {
     background: #f9f9f9;
-    padding: 25px;
-    width: 250px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
@@ -504,62 +321,24 @@ p a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid transparent; /* Added */
+    border: 2px solid transparent;
 }
 
-.step-card:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    border-color: #007bff; 
-}
-
-
-.step-card span {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.step-card p {
-    font-size: 16px;
-    color: #555;
-}
+/* Slider - Mobile Optimized */
 .slider {
     margin: 0;
     padding: 0;
     position: relative;
-    width: 100%;  /* Ensures full width */
-    height: 500px; /* Adjust height as needed */
+    width: 100%;
+    height: 300px;
     overflow: hidden;
     z-index: 1;
 }
 
 .slider img {
-    width: 100%;  /* Ensures the image stretches across the entire width */
-    height: 100%; /* Matches the height of the slider */
-    object-fit: cover; /* Ensures images cover the area without distortion */
-}
-
-
-.slide {
-    display: none;
     width: 100%;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-.caption {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-weight: bolder;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    background: white;
-    padding: 10px 0;
+    height: 100%;
+    object-fit: cover;
 }
 
 .prev, .next {
@@ -567,23 +346,350 @@ img {
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 10px;
-    color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    color: rgba(0, 0, 0, 0.7);
     font-weight: bolder;
-    font-size: 24px;
-    background: white;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.8);
     border: none;
     user-select: none;
+    border-radius: 3px;
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
-.fade {
-    animation: fadeEffect 1.5s;
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 0;
 }
 
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+/* ===================
+   BREAKPOINTS - MEDIA QUERIES
+   =================== */
+
+/* Small devices (640px and up) */
+@media only screen and (min-width: 640px) {
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .btn {
+        width: auto;
+        min-width: 120px;
+    }
+    
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+    
+    .container1 {
+        width: 80%;
+        padding: 25px;
+    }
+    
+    .features-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .user-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .reviews, .case-studies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .step-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .slider {
+        height: 400px;
+    }
+    
+    .caption {
+        font-size: 16px;
+    }
+    
+    .prev, .next {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) {
+    .section-container {
+        max-width: 750px;
+        padding: 0 20px;
+    }
+    
+    .container {
+        width: 80%;
+        max-width: 600px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    
+    .container1 {
+        width: 60%;
+        max-width: 500px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+    
+    .features-section h2,
+    .Users h2,
+    .how-it-works h2 {
+        font-size: 28px;
+    }
+    
+    .features h1 {
+        font-size: 2.2rem;
+    }
+    
+    .features-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .user-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .reviews, .case-studies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .step-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .user-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .slider {
+        height: 450px;
+    }
+    
+    .prev, .next {
+        font-size: 24px;
+        padding: 12px;
+    }
+}
+
+/* Large devices (1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .section-container {
+        max-width: 1000px;
+    }
+    
+    .container {
+        width: 70%;
+        max-width: 600px;
+        margin-top: 80px;
+    }
+    
+    .container1 {
+        width: 50%;
+        max-width: 450px;
+        margin-top: 80px;
+    }
+    
+    .features-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .user-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .reviews, .case-studies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .feature-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .step-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .user-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .slider {
+        height: 500px;
+    }
+    
+    .features-section,
+    .Users,
+    .how-it-works {
+        padding: 60px 20px;
+    }
+    
+    .testimonials-section {
+        padding: 60px 20px;
+    }
+    
+    .features {
+        padding: 60px 20px;
+    }
+    
+    .pricing-section {
+        padding: 50px 20px;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .section-container {
+        max-width: 1200px;
+    }
+    
+    .container {
+        width: 60%;
+        max-width: 550px;
+        margin-top: 100px;
+    }
+    
+    .container1 {
+        width: 40%;
+        max-width: 400px;
+        margin-top: 100px;
+    }
+    
+    .features h1 {
+        font-size: 2.5rem;
+    }
+    
+    .features-section h2,
+    .Users h2,
+    .how-it-works h2 {
+        font-size: 30px;
+    }
+    
+    .features-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    
+    .user-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    
+    .reviews, .case-studies {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    .feature-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .step-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Extra extra large devices (1400px and up) */
+@media only screen and (min-width: 1400px) {
+    .section-container {
+        max-width: 1400px;
+    }
+    
+    .features-cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .step-cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ===================
+   UTILITY CLASSES
+   =================== */
+
+/* Hide elements on mobile */
+@media only screen and (max-width: 639px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide elements on desktop */
+@media only screen and (min-width: 1024px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Text alignment utilities */
+@media only screen and (max-width: 767px) {
+    .text-center-mobile {
+        text-align: center !important;
+    }
+}
+
+/* Spacing utilities for mobile */
+@media only screen and (max-width: 767px) {
+    .padding-mobile {
+        padding: 15px !important;
+    }
+    
+    .margin-mobile {
+        margin: 10px !important;
+    }
+}
+
+/* ===================
+   PERFORMANCE OPTIMIZATIONS
+   =================== */
+
+/* Reduce animations on mobile for better performance */
+@media only screen and (max-width: 767px) {
+    .feature-card:hover,
+    .user-card:hover,
+    .step-card:hover,
+    .review-card:hover,
+    .case-card:hover,
+    .pricing-card:hover {
+        transform: translateY(-3px) scale(1.01);
+    }
+}
+
+/* Optimize touch targets for mobile */
+@media only screen and (max-width: 767px) {
+    .btn,
+    .prev,
+    .next {
+        min-height: 44px;
+        min-width: 44px;
+    }
 }

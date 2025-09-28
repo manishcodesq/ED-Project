@@ -23,8 +23,15 @@
     <nav class="navbar">
         <div class="logo">
             <img src="images/logo.jpg" alt="Logo">
+             <h2>Event Ease</h2>
             </div>
-        <h2>Event Ease</h2>
+       
+        <!-- Hamburger Menu Icon -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -34,7 +41,7 @@
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
-
+<div class="nav-overlay"></div>
     <!-- Hero Section -->
     <section class="hero">
         <!-- <div class="slider">
@@ -56,7 +63,7 @@
         
         
         <h1 data-aos="fade-up">Plan Events Effortlessly with Event Ease!</h1>
-        <p id="subtitle" data-aos="fade-up" data-aos-delay="200">Simplify event planning with smart tools like task management, budget tracking, QR check-ins, etc</p>
+        <p id="subtitle" data-aos="fade-up" data-aos-delay="200">Simplify event planning with smart tools like: </p>
         <p id="dynamic-text"></p>
         <div class="buttons" data-aos="fade-up" data-aos-delay="400">
             <!-- <button class="btn">Request a Demo</button> -->
@@ -256,7 +263,7 @@
             document.getElementById('trust-section').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-    <script>
+    <!-- <script>
         let slideIndex = 0;
         showSlides();
     
@@ -275,7 +282,8 @@
             slideIndex += n - 1; 
             showSlides();
         }
-    </script>
+    </script> -->
+    <script src="script.js"></script>
     
 </body>
 </html>

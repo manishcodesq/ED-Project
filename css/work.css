@@ -1,0 +1,458 @@
+/*
+==============================================================================
+CSS TIMELINE DESIGN - HOW IT WORKS PAGE
+Responsive timeline with reduced card sizes
+Created: 2025
+==============================================================================
+*/
+
+/* ---------------------------------------------------------------------------
+   BASE STYLES & RESETS
+   --------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    padding-top: 90px;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------------------------------------
+   TIMELINE CONTAINER & LAYOUT
+   --------------------------------------------------------------------------- */
+
+.work-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.process-timeline {
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.timeline-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Main timeline line running down the center */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, #007bff 0%, #0056b3 50%, #007bff 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ---------------------------------------------------------------------------
+   TIMELINE ITEMS & POSITIONING
+   --------------------------------------------------------------------------- */
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Even items (right side) */
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(50px);
+    animation: slideInRight 0.8s ease forwards;
+}
+
+/* Animation delays for staggered effect */
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+.timeline-item:nth-child(4) { animation-delay: 0.8s; }
+.timeline-item:nth-child(5) { animation-delay: 1.0s; }
+.timeline-item:nth-child(6) { animation-delay: 1.2s; }
+
+/* ---------------------------------------------------------------------------
+   TIMELINE STEP NUMBERS (CIRCLE BADGES)
+   --------------------------------------------------------------------------- */
+
+.timeline-item::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;                    /* Reduced size */
+    height: 50px;                   /* Reduced size */
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;               /* Smaller font */
+    box-shadow: 0 3px 12px rgba(0, 123, 255, 0.4);
+    z-index: 10;
+}
+
+/* Position adjustments for left/right items */
+.timeline-item:nth-child(even)::before {
+    left: -25px;                   /* Adjusted for smaller circles */
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -25px;                  /* Adjusted for smaller circles */
+    left: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   TIMELINE CONTENT CARDS
+   --------------------------------------------------------------------------- */
+
+.timeline-content {
+    background: white;
+    padding: 2rem;                 /* Reduced from 2.5rem */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 80%;                    /* Reduced from 85% */
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-6px);    /* Reduced lift effect */
+    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.15);
+    border-color: #007bff;
+}
+
+/* ---------------------------------------------------------------------------
+   TIMELINE ICONS
+   --------------------------------------------------------------------------- */
+
+.timeline-icon {
+    width: 60px;                   /* Reduced from 70px */
+    height: 60px;                  /* Reduced from 70px */
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;         /* Reduced spacing */
+    box-shadow: 0 3px 12px rgba(0, 123, 255, 0.3);
+}
+
+.timeline-icon i {
+    font-size: 1.6rem;             /* Reduced icon size */
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------
+   TIMELINE TEXT CONTENT
+   --------------------------------------------------------------------------- */
+
+.timeline-text h3 {
+    color: #333;
+    font-size: 1.5rem;             /* Reduced from 1.6rem */
+    font-weight: 600;
+    margin-bottom: 0.8rem;         /* Tighter spacing */
+}
+
+.timeline-text p {
+    color: #666;
+    font-size: 1rem;               /* Reduced from 1.1rem */
+    line-height: 1.6;
+    margin-bottom: 1.2rem;         /* Reduced margin */
+}
+
+/* Sub-bullet points styling */
+.sub-points {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-points li {
+    color: #555;
+    font-size: 0.9rem;             /* Smaller text */
+    padding: 0.25rem 0;            /* Tighter spacing */
+    position: relative;
+    padding-left: 1.2rem;          /* Reduced indent */
+}
+
+.sub-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;                    /* Smaller bullet */
+    height: 6px;                   /* Smaller bullet */
+    background: #007bff;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------------------------------
+   FEATURE HIGHLIGHT CARDS
+   --------------------------------------------------------------------------- */
+
+.features-highlight {
+    margin-bottom: 4rem;           /* Reduced spacing */
+    background: white;
+    padding: 3rem 2.5rem;          /* Reduced padding */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.features-highlight h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.features-highlight h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.highlight-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller cards */
+    gap: 2rem;                     /* Reduced gap */
+}
+
+.highlight-card {
+    text-align: center;
+    padding: 2rem 1.5rem;          /* Reduced padding */
+    background: #f8f9fa;
+    border-radius: 12px;           /* Slightly smaller radius */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.highlight-card:hover::before {
+    left: 100%;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);    /* Reduced lift */
+    border-color: #007bff;
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.2);
+}
+
+.highlight-card i {
+    font-size: 2.5rem;             /* Reduced from 3rem */
+    color: #007bff;
+    margin-bottom: 1.2rem;         /* Reduced spacing */
+    display: block;
+}
+
+.highlight-card h3 {
+    color: #333;
+    font-size: 1.4rem;             /* Reduced font size */
+    font-weight: 600;
+    margin-bottom: 0.8rem;         /* Tighter spacing */
+}
+
+.highlight-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;            /* Smaller text */
+}
+
+/* ---------------------------------------------------------------------------
+   ANIMATIONS & KEYFRAMES
+   --------------------------------------------------------------------------- */
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------------------------------------------------------------------------
+   RESPONSIVE DESIGN - TABLET
+   --------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    .work-container {
+        padding: 0 1rem;
+    }
+    
+    /* Mobile timeline - stack vertically */
+    .timeline-container::before {
+        left: 30px;                /* Move line to left side */
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        justify-content: flex-start;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+        justify-content: flex-start;
+    }
+    
+    .timeline-item::before {
+        left: 0 !important;
+        right: auto !important;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        padding: 1.5rem;           /* Further reduced for mobile */
+    }
+    
+    .timeline-icon {
+        width: 50px;               /* Smaller on mobile */
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-icon i {
+        font-size: 1.4rem;         /* Smaller icons */
+    }
+    
+    .timeline-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .timeline-text p {
+        font-size: 0.95rem;
+    }
+    
+    /* Feature cards mobile adjustments */
+    .features-highlight {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .highlight-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .highlight-card {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .highlight-card i {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .highlight-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .highlight-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ---------------------------------------------------------------------------
+   RESPONSIVE DESIGN - MOBILE
+   --------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+    body {
+        padding-top: 75px;
+    }
+    
+    .timeline-content {
+        padding: 1.2rem;           /* Smallest padding */
+    }
+    
+    .timeline-icon {
+        width: 45px;               /* Smallest icons */
+        height: 45px;
+    }
+    
+    .timeline-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-text p {
+        font-size: 0.9rem;
+    }
+    
+    .highlight-card {
+        padding: 1.2rem 1rem;      /* Smallest card padding */
+    }
+    
+    .highlight-card i {
+        font-size: 2rem;
+    }
+    
+    .highlight-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/*
+==============================================================================
+END OF TIMELINE STYLES
+==============================================================================
+*/

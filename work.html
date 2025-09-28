@@ -3,36 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How-It-Works | EventEase</title>
+    <title>How It Works | EventEase</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/trust.css">
+    <link rel="stylesheet" href="css/work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <h2>How It Works?</h2>
-        <div class="step-cards">
-            <div class="step-card">
-                <span>1️⃣</span>
-                <p>Sign up & set up your profile.</p>
-            </div>
-            <div class="step-card">
-                <span>2️⃣</span>
-                <p>Browse through our tools and services tailored for you.</p>
-            </div>
-            <div class="step-card">
-                <span>3️⃣</span>
-                <p>Start using our platform seamlessly with a user-friendly interface.</p>
-            </div>
-            <div class="step-card">
-                <span>4️⃣</span>
-                <p>Track your progress and optimize your experience.</p>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo">
+            <h2>Event Ease</h2>
         </div>
-    </section>
+       
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html" class="active">How It Works</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="work-container">
+        <!-- Hero Section -->
+        <section class="work-hero">
+            <h1>How EventEase Works</h1>
+            <p>Get started with our simple 6-step process to create amazing events effortlessly</p>
+        </section>
+
+        <!-- Process Timeline -->
+        <section class="process-timeline">
+            <div class="timeline-container">
+                
+                <div class="timeline-item" data-step="01">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>Sign Up & Create Profile</h3>
+                            <p>Register with your email, verify your account, and set up your personal or business profile with customizable preferences.</p>
+                            <ul class="sub-points">
+                                <li>✓ Quick 2-minute registration</li>
+                                <li>✓ Email verification & security setup</li>
+                                <li>✓ Profile customization options</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="02">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-calendar-plus"></i>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>Create Your Event</h3>
+                            <p>Use our intuitive event creation wizard to set up your event details, choose templates, and configure settings.</p>
+                            <ul class="sub-points">
+                                <li>✓ Event templates library</li>
+                                <li>✓ Custom branding options</li>
+                                <li>✓ Date, venue & capacity setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="03">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>Manage Tasks & Budget</h3>
+                            <p>Assign tasks to team members, track progress, and monitor your budget with real-time updates and notifications.</p>
+                            <ul class="sub-points">
+                                <li>✓ Task assignment & tracking</li>
+                                <li>✓ Budget breakdown & monitoring</li>
+                                <li>✓ Team collaboration tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="04">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>Promote & Share Event</h3>
+                            <p>Share your event across social media, send invitations, and track registrations with our built-in marketing tools.</p>
+                            <ul class="sub-points">
+                                <li>✓ Social media integration</li>
+                                <li>✓ Custom invitation templates</li>
+                                <li>✓ Registration tracking dashboard</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="05">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>QR Check-in & Management</h3>
+                            <p>Generate QR codes for attendees, manage check-ins seamlessly, and track attendance in real-time.</p>
+                            <ul class="sub-points">
+                                <li>✓ Instant QR code generation</li>
+                                <li>✓ Mobile check-in app</li>
+                                <li>✓ Real-time attendance tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="06">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>Analyze & Optimize</h3>
+                            <p>Access detailed analytics, gather feedback, and use insights to improve your future events with comprehensive reports.</p>
+                            <ul class="sub-points">
+                                <li>✓ Event performance analytics</li>
+                                <li>✓ Attendee feedback collection</li>
+                                <li>✓ Detailed success reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Features Highlight -->
+        <section class="features-highlight">
+            <h2>Why Our Process Works</h2>
+            <div class="highlight-cards">
+                <div class="highlight-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Save Time</h3>
+                    <p>Reduce event planning time by 70% with our automated workflows and smart templates.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Collaboration</h3>
+                    <p>Keep everyone synchronized with real-time updates and collaborative planning tools.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Reliable & Secure</h3>
+                    <p>Enterprise-grade security ensures your data and attendee information stays protected.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="work-cta">
+            <h2>Ready to Start Planning?</h2>
+            <p>Join thousands of event planners who trust EventEase</p>
+            <a href="signup.html" class="cta-btn">
+                <i class="fas fa-rocket"></i>
+                Start Your First Event
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 EventEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
