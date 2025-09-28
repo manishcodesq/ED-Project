@@ -163,7 +163,38 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+    // Newsletter form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.querySelector('.newsletter-form');
     
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (email) {
+                // Show success message
+                const button = this.querySelector('button');
+                const originalIcon = button.innerHTML;
+                
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.background = '#28a745';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalIcon;
+                    button.style.background = '#007bff';
+                    this.querySelector('input').value = '';
+                }, 2000);
+                
+                // Here you would typically send the email to your backend
+                console.log('Newsletter subscription:', email);
+            }
+        });
+    }
+});
+
     // Back to Top Button (if exists)
     const backToTop = document.getElementById("back-to-top");
     
